@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xs-14">
+    <div class="row">
+      <div class="col-md-12">
+        <%= link_to raw('<i class="fa fa-plus-square"></i> Create Note'), new_note_path(), class: 'btn btn-default' %>
+      </div>
+    </div>
+    <br/>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong><span class="glyphicon glyphicon-th"></span> Notes</strong>
+      </div>
+      <table class="table">
+        <thead>
+          <th>#</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Color</th>
+          <th>Private</th>
+          <th>Created By</th>
+          <th>&nbsp;</th>
+        </thead>
+        <tbody>
+          <% @notes.each_with_index do |note, index| %>
+            <tr>
+              <td><%= "#{index + 1}" %></td>
+              <td><%= link_to "#{truncate(note.title,length: 23)}",  note_path(note) %></td>
+              <td><%= truncate(note.content,:length => 25) %></td>
+              <td><%= note.color %></td>
+              <td><%= yesno note.private %></td>
+              <td><%= note.try(:user) %></td>
+              <td align="right">
+                <%=link_to raw('<span class="glyphicon glyphicon-eye-open"></span> view'), note_path(note), class: 'btn btn-success btn-xs' %>
+                <%=link_to raw('<span class="glyphicon glyphicon-pencil"></span> Edit'), edit_note_path(note), class: 'btn btn-primary btn-xs' %>
+                <%=link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), note_path(note), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

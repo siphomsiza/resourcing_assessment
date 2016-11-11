@@ -1,0 +1,14 @@
+<%@notes.each do |note|%>
+  <div class="note <%= note.color %> ui-draggable" style="left: <%=note.pos_x%>; top: <%=note.pos_y%>; z-index: 9;">
+    <p class="note_title"><%= truncate(note.title,length: 23)%></p>
+    <p class="note_content"><%= truncate(note.content,length: 120)%></p>
+    <div class="note_actions">
+      <%=link_to raw('<span class="glyphicon glyphicon-eye-open"></span>'), note_path(note) ,title: "view note" if note.user == current_user %>
+      <%=link_to raw('<span class="glyphicon glyphicon-pencil"></span>'), edit_note_path(note) ,title: "edit note" if note.user == current_user%>
+      <%=link_to raw('<span class="glyphicon glyphicon-trash"></span>'), note_path(note), method: :delete, data: { confirm: 'Are you sure?' },title: "delete note" if note.user == current_user%>
+
+    </div>
+    <div class="author"><%= note.user%></div>
+    <span class="data"><%=note.id%></span>
+  </div>
+<%end%>
