@@ -9,20 +9,11 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
-<<<<<<< HEAD
 * Heroku live environment Url
-  
+
 * Ruby version
   ruby 2.2.2
   rails 5
-=======
- 
-* Heroku live environment Url
-  
-* Ruby version
-ruby 2.2.2
-rails 5
->>>>>>> 25a685093c1151ec6f6f7c77cd2697cc0e7c4982
 
 * Configuration
   run $ bundle install #To Install all of the required gems from your specified sources:
