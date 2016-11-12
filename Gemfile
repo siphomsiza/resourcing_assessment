@@ -68,6 +68,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'heroku'
+# seed migrations
+# Rails Data Migration (http://github.com/harrystech/seed_migration)
+gem 'seed_migration'
 
 group :test do
   gem 'rspec'

@@ -1,0 +1,6 @@
+SYSTEM_USER_DATA:
+  firstname: Sticky Note
+  lastname: User
+  email: sticky@notes.com
+  password: password
+  password_confirmation: password
