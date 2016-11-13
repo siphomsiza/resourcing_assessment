@@ -49,7 +49,6 @@ group :development, :test do
   # factory_girl_rails provides integration between factory_girl and rails 3 (http://github.com/thoughtbot/factory_girl_rails)
   gem 'factory_girl_rails'
   # Easily generate fake data (https://github.com/stympy/faker)
-  gem 'faker'
   # RSpec for Rails (http://github.com/rspec/rspec-rails)
   gem 'rspec-rails', '~> 3.0.0.beta1'
   gem 'thin'
@@ -71,6 +70,7 @@ gem 'heroku'
 # seed migrations
 # Rails Data Migration (http://github.com/harrystech/seed_migration)
 gem 'seed_migration'
+gem 'faker'
 
 group :test do
   gem 'rspec'
