@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
 # sticky_notes_assessment
-resourcing assessment
->>>>>>> 25a685093c1151ec6f6f7c77cd2697cc0e7c4982
-# README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
