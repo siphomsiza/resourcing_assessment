@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 * Heroku live environment Url
-
+  https://sticky-notes-assessment.herokuapp.com
 * Ruby version
   ruby 2.2.2
   rails 5
